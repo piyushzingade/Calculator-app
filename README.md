@@ -175,10 +175,10 @@ Stuff I find usefull and want to learn:
 ## Author
 
 
-- Github - [@vatsalsinghkv](https://github.com/piyushzingade)
-- Twitter - [@vatsalsinghkv](https://x.com/ZingadePiyush)
-- Instagram - [@vatsal.sing.hkv](https://www.instagram.com/piyushzingade)
-- Facebook - [@vatsalsinghkv](https://www.facebook.com/piyushzingade)
+- Github - [@piyushzingade](https://github.com/piyushzingade)
+- Twitter - [@piyushzingade](https://x.com/ZingadePiyush)
+- Instagram - [@piyushzingade](https://www.instagram.com/piyushzingade)
+- Facebook - [@piyushzingade](https://www.facebook.com/piyushzingade)
 
 
 ## Acknowledgments
