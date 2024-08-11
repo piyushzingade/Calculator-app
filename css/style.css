@@ -1,0 +1,345 @@
+/* THEMES */
+.theme-1 {
+  /* Backgrounds */
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+
+  /* Keys */
+  --primary-key: hsl(30, 25%, 89%);
+  --primary-key-shadow: hsl(28, 16%, 65%);
+
+  --secondary-key: hsl(225, 21%, 49%);
+  --secondary-key-shadow: hsl(224, 28%, 35%);
+
+  --special-key: hsl(6, 63%, 50%);
+  --special-key-shadow: hsl(6, 70%, 34%);
+
+  /* Text */
+  --body-text: hsl(0, 0%, 100%);
+  --primary-text: hsl(221, 14%, 31%);
+  --secondary-text: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+  /* Backgrounds */
+  --main-bg: hsl(0, 0%, 90%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --display-bg: hsl(0, 0%, 93%);
+
+  /* Keys */
+  --primary-key: hsl(45, 7%, 89%);
+  --primary-key-shadow: hsl(35, 11%, 61%);
+
+  --secondary-key: hsl(185, 42%, 37%);
+  --secondary-key-shadow: hsl(185, 58%, 25%);
+
+  --special-key: hsl(25, 98%, 40%);
+  --special-key-shadow: hsl(25, 99%, 27%);
+
+  /* Text */
+  --body-text: hsl(60, 10%, 19%);
+  --primary-text: hsl(60, 10%, 19%);
+  --secondary-text: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+  /* Backgrounds */
+  --main-bg: hsl(268, 75%, 9%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --display-bg: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --primary-key: hsl(268, 47%, 21%);
+  --primary-key-shadow: hsl(290, 70%, 36%);
+
+  --secondary-key: hsl(281, 89%, 26%);
+  --secondary-key-shadow: hsl(285, 91%, 52%);
+
+  --special-key: hsl(176, 100%, 44%);
+  --special-key-shadow: hsl(177, 92%, 70%);
+
+  /* Text */
+  --body-text: hsl(52, 100%, 62%);
+  --primary-text: hsl(52, 100%, 62%);
+  --secondary-text: hsl(221, 14%, 31%);
+}
+
+@media (prefers-color-scheme: light) {
+  /* theme-1 = theme-2 */
+  .theme-1 {
+    /* Backgrounds */
+    --main-bg: hsl(0, 0%, 90%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --display-bg: hsl(0, 0%, 93%);
+
+    /* Keys */
+    --primary-key: hsl(45, 7%, 89%);
+    --primary-key-shadow: hsl(35, 11%, 61%);
+
+    --secondary-key: hsl(185, 42%, 37%);
+    --secondary-key-shadow: hsl(185, 58%, 25%);
+
+    --special-key: hsl(25, 98%, 40%);
+    --special-key-shadow: hsl(25, 99%, 27%);
+
+    /* Text */
+    --body-text: hsl(60, 10%, 19%);
+    --primary-text: hsl(60, 10%, 19%);
+    --secondary-text: hsl(0, 0%, 100%);
+  }
+
+  /* theme-2 = theme-1 */
+  .theme-2 {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --display-bg: hsl(224, 36%, 15%);
+
+    /* Keys */
+    --primary-key: hsl(30, 25%, 89%);
+    --primary-key-shadow: hsl(28, 16%, 65%);
+
+    --secondary-key: hsl(225, 21%, 49%);
+    --secondary-key-shadow: hsl(224, 28%, 35%);
+
+    --special-key: hsl(6, 63%, 50%);
+    --special-key-shadow: hsl(6, 70%, 34%);
+
+    /* Text */
+    --body-text: hsl(0, 0%, 100%);
+    --primary-text: hsl(221, 14%, 31%);
+    --secondary-text: hsl(0, 0%, 100%);
+  }
+}
+
+/* GLOBAL */
+
+html {
+  font-size: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5%;
+
+  color: var(--body-text);
+  background-color: var(--main-bg);
+
+  transition: all 0.45s ease-in-out;
+}
+
+h4 {
+  font-size: 0.75rem;
+}
+
+h6 {
+  font-size: 0.3rem;
+  margin-right: 20px;
+}
+
+/* Round Corners*/
+header,
+main,
+.keys,
+.theme-btn-container,
+.display {
+  border: none;
+  border-radius: 8px;
+  user-select: none;
+}
+
+.keys {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-btn-container {
+  border-radius: 10px;
+}
+
+.keys,
+.theme-btns {
+  cursor: pointer;
+}
+
+/* Theme-Header */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  min-width: 100px;
+  max-width: 393px;
+  width: 100%;
+}
+
+.display {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  /* justify-content: flex-end; breaks scrolling */
+  align-items: center;
+
+  text-transform: uppercase;
+
+  margin: 20px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: var(--display-bg);
+
+  white-space: nowrap;
+  overflow-x: auto;
+  user-select: auto;
+}
+
+.theme-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.theme-btn-container {
+  background-color: var(--keypad-bg);
+  height: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  padding: 2px 5px;
+}
+
+/* 1 2 3 before theme-btns */
+.theme-btn-1::before {
+  content: '1';
+  font-size: 0.3rem;
+  color: var(--body-text);
+
+  position: absolute;
+  bottom: 20px;
+  left: 9px;
+}
+
+.theme-btn-2::before {
+  content: '2';
+  font-size: 0.3rem;
+  color: var(--body-text);
+
+  position: absolute;
+  bottom: 20px;
+  left: calc(9px + 13px);
+}
+
+.theme-btn-3::before {
+  content: '3';
+  font-size: 0.3rem;
+  color: var(--body-text);
+
+  position: absolute;
+  bottom: 20px;
+  left: calc(9px + 28px);
+}
+
+.theme-btns {
+  /* background-color: var(--keypad-bg); */
+  background-color: var(--keypad-bg);
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.show {
+  background-color: var(--special-key);
+}
+
+/* Key-Pad */
+.key-pad {
+  display: grid;
+  grid-template-columns: repeat(4, 5fr);
+  grid-auto-rows: 50px;
+  grid-gap: 0.5rem;
+
+  background-color: var(--keypad-bg);
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+.primary-key {
+  font-size: 0.75rem;
+  color: var(--primary-text);
+  background-color: var(--primary-key);
+  box-shadow: 0px 3px var(--primary-key-shadow);
+}
+
+.secondary-key {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--secondary-key);
+  box-shadow: 0px 3px var(--secondary-key-shadow);
+}
+
+#Reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.special-key {
+  grid-column-start: 3;
+  grid-column-end: 5;
+
+  color: var(--secondary-text);
+  background-color: var(--special-key);
+  box-shadow: 0px 3px var(--special-key-shadow);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 25px;
+}
+
+.attribution a {
+  color: var(--special-key);
+  font-weight: bold;
+}
+
+/* SPECIAL CLASSES */
+.pressed {
+  box-shadow: 0 3px 4px 0 var(--body-text);
+  opacity: 0.5;
+}
+
+/* MOBILE */
+@media screen and (max-width: 576px) {
+  .keys {
+    border-radius: 3px;
+  }
+
+  .attribution {
+    font-size: 9px;
+  }
+}

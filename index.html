@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="author" content="Vatsal Singh" />
+    <meta
+      name="keywords"
+      content="calculator app, calculator, frontendmentor challenge, webapp project, html project, javascript project"
+    />
+    <meta
+      name="description"
+      content="Calculator App with three Themes build by Vatsal Singh, challenge on Frontend Mentor"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-calculator.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Calculator app</title>
+  </head>
+
+  <body class="theme-1">
+    <main>
+      <header>
+        <h4>calc</h4>
+
+        <div class="theme-container">
+          <h6>THEME</h6>
+          <div class="theme-btn-container">
+            <div class="theme-btns theme-btn-1 show" id="theme-1"></div>
+            <div class="theme-btns theme-btn-2" id="theme-2"></div>
+            <div class="theme-btns theme-btn-3" id="theme-3"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="display"></div>
+
+      <div class="key-pad">
+        <button
+          class="keys primary-key numeric-key"
+          id="7"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          7
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="8"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          8
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="9"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          9
+        </button>
+        <button
+          class="keys secondary-key"
+          id="Backspace"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          DEL
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="4"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          4
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="5"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          5
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="6"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          6
+        </button>
+        <button
+          class="keys primary-key"
+          id="+"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          +
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="1"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          1
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="2"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          2
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="3"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          3
+        </button>
+        <button
+          class="keys primary-key"
+          id="-"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          -
+        </button>
+        <button
+          class="keys primary-key"
+          id="."
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          .
+        </button>
+        <button
+          class="keys primary-key numeric-key"
+          id="0"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          0
+        </button>
+        <button
+          class="keys primary-key"
+          id="/"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          /
+        </button>
+        <button
+          class="keys primary-key"
+          id="*"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          x
+        </button>
+        <button
+          class="keys secondary-key grey-key"
+          id="Reset"
+          tabindex="-1"
+          onkeypress="return event.keyCode != 13;"
+        >
+          RESET
+        </button>
+        <button class="keys special-key red-key" id="Enter" tabindex="-1">
+          =
+        </button>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Fron,tend Mentor</a
+      >. Coded by
+      <a href="https://github.com/vatsalsinghkv/calculator-app" target="_blank"
+        >Vatsal Singh</a
+      >.
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/theme-changer.js"></script>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
